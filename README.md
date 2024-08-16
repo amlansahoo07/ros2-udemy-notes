@@ -131,3 +131,24 @@ This node will publish messages to a topic that the listener is subscribed to.
 
 If everything is set up correctly, you should see the listener terminal printing out the messages sent by the talker node. This confirms that your ROS2 installation and environment setup are working as expected.
 
+
+## Colcon Overview and Usage
+
+### What is Colcon?
+
+- **Colcon** is a command-line tool used in ROS2 for building and managing workspaces.
+- It stands for "collective construction" and succeeds earlier ROS1 build tools like `catkin` and `ament`.
+- **Key Features**:
+  - **Build Tool**: Automates compiling code and managing dependencies in a ROS2 workspace.
+  - **Multi-Package Support**: Handles multiple packages with different build systems within the same workspace.
+  - **Workspace Management**: Provides commands to build, test, and install packages, ensuring correct dependency resolution.
+
+### Why Do We Use `colcon build`?
+
+The command `colcon build` is essential for compiling the packages in a ROS2 workspace.
+
+- **Compiles Code**: Builds all source code in the packages found in your workspace.
+- **Handles Dependencies**: Determines the build order based on package dependencies.
+- **Parallel Builds**: Builds multiple packages simultaneously to speed up the process.
+- **Generates Setup Files**: Creates setup files to include built packages in your environment.
+- **Error Handling**: Provides detailed logs and output for diagnosing build issues.
